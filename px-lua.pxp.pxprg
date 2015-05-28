@@ -1,0 +1,5 @@
+REM px-lua POC
+LET LUA=NEW("lua")
+LUA'EXEC_FILE("add.lua")
+LUA'TEST_ADD(10,15)
+PRINT "It Worked!"
