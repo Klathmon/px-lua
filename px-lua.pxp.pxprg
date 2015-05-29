@@ -1,5 +1,7 @@
 REM px-lua POC
 LET LUA=NEW("lua")
-LUA'EXEC_FILE("add.lua")
-LUA'TEST_ADD(10,15)
-PRINT "It Worked!"
+LUA'RUN_STRING("file = io.open(""test.txt"", ""w"")")
+LUA'RUN_STRING("file:write(""Hello World"")")
+LUA'RUN_STRING("file:close()")
+LUA'RUN_FILE("add.lua")
+PRINT LUA'RUN_STRING$("return add(""If you can see this"","" that means that it's working!"")")
